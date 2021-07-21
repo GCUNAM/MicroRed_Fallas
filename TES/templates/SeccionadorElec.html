@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+		<title>JCalderón</title>
+		   {%load static%}
+       <link rel="stylesheet" href="{%static 'css/O.css' %}">
+
+</head>
+
+	<header>
+		<div class="navbar">
+  <a href="/">PRINCIPAL</a>
+  <div class="subnav">
+    <a href="#">INICIO<i class="fa fa-caret-down"></i></a>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">OTROS<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="/CableElec">CableElec</a>
+      <a href="/CableComun">CableComun</a>
+      <a href="/Celdas">Celdas</a>
+			<a href="/Est_Meteoro">Est_Meteoro</a>
+      <a href="/Generador">Generador</a>
+			<a href="/PLC">PLC</a>
+			<a href="/Radio">Radio</a>
+			<a href="/SeccionadorElec">SeccionadorElec</a>
+			<a href="/Servidor">Servidor</a>
+			<a href="/TableroControl">TableroControl</a>
+			<a href="/TableroProtec">TableroProtec</a>
+			<a href="/Transfer">Transfer</a>
+			<a href="/Transformador">Transformador</a>
+			<a href="/UPS">UPS</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <a href="/Diagrama">DIAGRAMA<i class="fa fa-caret-down"></i></a>
+  </div>
+  <a href="#footer">CONTACTO</a>
+</div>
+	</header>
+<body>
+
+{%load static%}
+<div style= "background: url({% static 'Ima/91.jpg'%});
+border: 5px solid black;
+font: italic bold 50px/50px Times New Roman, serif;
+text-align:center;
+
+margin: auto; width: 100%; height: 100%; padding-top: 60px; padding-bottom: : 60px;">
+
+
+</br>
+	<a class = "v" href="/">Análisis de Modo y Efecto de Falla <br>Seccionador Eléctrico</br></a>
+</br>
+</br>
+
+
+ </div>
+
+
+{%load static%}
+<div style= "background: url({% static 'Ima/120.jpg'%}); border: 5px solid black; width: 100%; padding-top: 60px; padding-bottom: : 60px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;">
+
+
+<style>
+  table, th, td, input {
+
+  border : 3px solid #345;
+
+}
+  table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+</style>
+
+
+<div>
+</br>
+</br>
+{% for Post in posts %}
+
+    <table id="tabla" >
+      <tr style="background-color:goldenrod; box-shadow: 0 0 30px #4f9;">
+        <th>EQUIPO</th>
+        <th>DESCRIPCION</th>
+        <th>CAUSAS</th>
+        <th>EFECTOS</th>
+        <th>SEVERIDAD</th>
+        <th>OCURRENCIA</th>
+        <th>DETECCION</th>
+        <th>Número de Ponderación de Riesgo(NPR)</th>
+        <th>RIESGO</th>
+        <th></th>
+				<th>Probables Soluciones</th>
+        <th>Tiempo aprox. de Reparo</th>
+        <th>Costo aprox.</th>
+     </tr>
+
+
+      <tr style="background-color: khaki;">
+        {%load static%}
+        <td rowspan="5" style="color:springgreen; background: darkred; opacity: 0.85; box-shadow: 0 0 30px #4f9;">{{ Post.Elemento|linebreaksbr }}</td>
+        <td>{{ Post.Descripción_1|linebreaksbr }}</td>
+        <td>{{ Post.Causa_1|linebreaksbr }}</td>
+        <td>{{ Post.Efectos_1|linebreaksbr }}</td>
+        <td><label for="a"></label>
+        <input type="text" name="a" id="a" maxlength= "2" size="7"></td>
+        <td><label for="b"></label>
+        <input type="text" name="b" id="b" maxlength= "2" size="7"></td>
+        <td><label for="c"></label>
+        <input type="text" name="c" id="c" maxlength= "2" size="7"></td>
+        <td id= "m"><label for="d"></label>
+        <input type="text" name="d" id="d"  maxlength= "4" size="7"></td>
+        <td id= "n"><label for="e"></label></td>
+        <td><input type="button" onclick="valor (); m ();" name="r" id="r" value="Resultado"></td>
+				<td><label for="g"></label>
+        <input type="text" name="g" id="g" maxlength= "60" size="7"></td>
+        <td><label for="k"></label>
+        <input type="text" name="k" id="k" maxlength= "25" size="7"></td>
+        <td><label for="l"></label>
+        <input type="text" name="l" id="l" maxlength= "10" size="7" value = 0></td>
+        <td rowspan="12" style="color:springgreen; background: darkred; opacity: 0.85; box-shadow: 0 0 30px #4f9;">...</td>
+      </tr>
+      <tr>
+        <td style= "color:lightgray";>{{ Post.Descripción_2|linebreaksbr }}</td>
+        <td style= "color:lightgray";>{{ Post.Causa_2|linebreaksbr }}</td>
+        <td style= "color:lightgray";>{{ Post.Efectos_2|linebreaksbr }}</td>
+        <td><label for="a1"></label>
+        <input type="text" name="a1" id="a1" maxlength= "2" size="7"></td>
+        <td><label for="b1"></label>
+        <input type="text" name="b1" id="b1" maxlength= "2" size="7"></td>
+        <td><label for="c1"></label>
+        <input type="text" name="c1" id="c1" maxlength= "2" size="7"></td>
+        <td id= "m1"><label for="d1"></label>
+        <input type="text" name="d1" id="d1"  maxlength= "4" size="7"></td>
+        <td id= "n1"><label for="e1"></label></td>
+        <td><input type="button" onclick="valor1 (); m1 ();" name="r1" id="r1" value="Resultado"></td>
+				<td><label for="g1"></label>
+        <input type="text" name="g1" id="g1" maxlength= "60" size="7"></td>
+        <td><label for="k1"></label>
+        <input type="text" name="k1" id="k1" maxlength= "25" size="7"></td>
+        <td><label for="l"></label>
+        <input type="text" name="l1" id="l1" maxlength= "10" size="7" value = 0></td>
+      </tr>
+      <tr  style="background-color:khaki;">
+        <td>{{ Post.Descripción_3|linebreaksbr }}</td>
+        <td>{{ Post.Causa_3|linebreaksbr }}</td>
+        <td>{{ Post.Efectos_3|linebreaksbr }}</td>
+        <td><label for="a2"></label>
+        <input type="text" name="a2" id="a2" maxlength= "2" size="7"></td>
+        <td><label for="b2"></label>
+        <input type="text" name="b2" id="b2" maxlength= "2" size="7"></td>
+        <td><label for="c2"></label>
+        <input type="text" name="c2" id="c2" maxlength= "2" size="7"></td>
+        <td id= "m2"><label for="d2"></label>
+        <input type="text" name="d2" id="d2"  maxlength= "4" size="7"></td>
+        <td id= "n2"><label for="e2"></label></td>
+        <td><input type="button" onclick="valor2 (); m2 ();" name="r2" id="r2" value="Resultado"></td>
+				<td><label for="g2"></label>
+        <input type="text" name="g2" id="g2" maxlength= "60" size="7"></td>
+        <td><label for="k2"></label>
+        <input type="text" name="k2" id="k2" maxlength= "25" size="7"></td>
+        <td><label for="l"></label>
+        <input type="text" name="l2" id="l2" maxlength= "10" size="7" value = 0></td>
+      </tr>
+
+      <tr>
+        <td style= "color:lightgray";>{{ Post.Descripción_4|linebreaksbr }}</td>
+        <td style= "color:lightgray";>{{ Post.Causa_4|linebreaksbr }}</td>
+        <td style= "color:lightgray";>{{ Post.Efectos_4|linebreaksbr }}</td>
+        <td><label for="a3"></label>
+        <input type="text" name="a3" id="a3" maxlength= "2" size="7"></td>
+        <td><label for="b3"></label>
+        <input type="text" name="b3" id="b3" maxlength= "2" size="7"></td>
+        <td><label for="c3"></label>
+        <input type="text" name="c3" id="c3" maxlength= "2" size="7"></td>
+        <td id= "m3"><label for="d3"></label>
+        <input type="text" name="d3" id="d3"  maxlength= "4" size="7"></td>
+        <td id= "n3"><label for="e3"></label></td>
+        <td><input type="button" onclick="valor3 (); m3 ();" name="r3" id="r3" value="Resultado"></td>
+				<td><label for="g3"></label>
+        <input type="text" name="g3" id="g3" maxlength= "60" size="7"></td>
+        <td><label for="k3"></label>
+        <input type="text" name="k3" id="k3" maxlength= "25" size="7"></td>
+        <td><label for="l3"></label>
+        <input type="text" name="l3" id="l3" maxlength= "10" size="7" value = 0></td>
+      </tr>
+
+      <tr style="background-color:khaki;">
+        <td>{{ Post.Descripción_5|linebreaksbr }}</td>
+        <td>{{ Post.Causa_5|linebreaksbr }}</td>
+        <td>{{ Post.Efectos_5|linebreaksbr }}</td>
+        <td><label for="a4"></label>
+        <input type="text" name="a4" id="a4" maxlength= "2" size="7"></td>
+        <td><label for="b4"></label>
+        <input type="text" name="b4" id="b4" maxlength= "2" size="7"></td>
+        <td><label for="c4"></label>
+        <input type="text" name="c4" id="c4" maxlength= "2" size="7"></td>
+        <td id= "m4"><label for="d4"></label>
+        <input type="text" name="d4" id="d4"  maxlength= "4" size="7"></td>
+        <td id= "n4"><label for="e4"></label></td>
+        <td><input type="button" onclick="valor4 (); m4 ();" name="r4" id="r4" value="Resultado"></td>
+				<td><label for="g4"></label>
+        <input type="text" name="g4" id="g4" maxlength= "60" size="7"></td>
+        <td><label for="k4"></label>
+        <input type="text" name="k4" id="k4" maxlength= "25" size="7"></td>
+        <td><label for="l4"></label>
+        <input type="text" name="l4" id="l4" maxlength= "10" size="7" value = 0></td>
+      </tr>
+
+
+
+      <tr>
+        <td colspan="12" align= "right" style="background-color:goldenrod; box-shadow: 0 0 30px #4f9;"><input type="button" onclick="valor12 ();" name="r12" id="r12" value="TOTAL"></td>
+        <td><label for="l12"></label>
+        <input type="text" name="l12" id="l12" maxlength= "10" size="7" value = 0></td>
+      </tr>
+
+</table>
+
+{% endfor %}
+
+
+<div  style= "padding-top: 40px;" align= "center">
+<button style = "border : 3px solid #333; padding-top: 5px; padding-bottom: 5px;" id="btnExportar"> EXPORTAR DATOS A EXCEL</button>
+<button style = "border : 3px solid #333; padding-top: 5px; padding-bottom: 5px;" id="btnExportar"><a href="" style= "font-size: 15px;"> Ir a Especificaciones de Origen<a></button>
+</div>
+
+</br>
+
+{% load static %}
+<script src="{% static 'js/table2excel.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum1.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum2.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum3.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum4.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum5.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum6.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum7.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum8.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum9.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum10.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum11.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Sum12.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Total5.js' %}" type="text/javascript"></script>
+<script>
+ document.getElementById('btnExportar').addEventListener('click', function() {
+   var table2excel = new Table2Excel();
+   table2excel.export(document.querySelectorAll("#tabla"));
+ });
+</script>
+
+</div>
+</div>
+
+
+
+{% load static %}
+<div style= "background: url({% static 'Ima/91.jpg'%}); width: 100%;">
+</div>
+
+
+</body>
+
+
+<footer id= "footer"; style="width: 100%;">
+
+
+{% load static %}
+
+<a></a><a></a><a></a>
+<img src="{% static 'Ima/UNAM1.jpg' %}" WIDTH=200 HEIGHT=220 align= "right" style="margin-right: 70px; margin-top: 40px;"></img>
+
+<br>
+<h6 style="margin-left: 70px; margin-top: 15px; font-size: 25px;"> CONTACTO </h6>
+</br>
+
+
+
+  <div style="margin-left: 70px;" class="row">
+
+
+   <label for="name">POSGRADO:</label>
+   <label style= "font-size: 14px;"><i>Administración de la Tecnología</i></label>
+ </div>
+ <br></br>
+ <div style="margin-left: 70px;" class="row">
+   <label for="email">E-MAIL:</label>
+	 <label style= "font-size: 14px;"><i>georgecal@hotmail.com</i></label>
+
+ </div>
+ <br></br>
+ <div style="margin-left: 70px;" class="row">
+   <label for="message">DOMICILIO:</label>
+  <label style= "font-size: 14px;" ><i>Av. Universidad 3000, Ciudad Universitaria
+	<br>	Alcaldía Coyoacán, C.P. 04510, Ciudad de México.</i></label>
+ </div>
+<br></br>
+
+<h4 style= "font-size: 20px; margin-top: 25px;" align="center" >UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO </h4>
+<h5 style= "font-size: 20px; margin-bottom: 30px;" align="center"> JORGE CALDERON MENDOZA
+<br style= "font-size: 20px; margin-bottom: 30px; " align="center"> TUTOR: DR. ENRIQUE CABRAL CANO</br></h5>
+
+</footer>
+
+</html>

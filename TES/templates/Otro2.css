@@ -1,0 +1,10 @@
+table
+{
+border-collapse: collapse; /* Los bordes de la tabla aparecen juntos */
+}
+
+
+td / * Todas las celdas de la tabla ... * /
+{
+border: 1px solid black; / * tienen un borde de 1 píxel * /
+}

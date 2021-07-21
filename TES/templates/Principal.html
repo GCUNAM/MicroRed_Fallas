@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+		<title>JCalderón</title>
+		   {%load static%}
+       <link rel="stylesheet" href="{%static 'css/O1.css' %}">
+
+</head>
+
+	<header>
+		<div class="navbar">
+  <a href="/">PRINCIPAL</a>
+  <div class="subnav">
+    <a href="#">INICIO<i class="fa fa-caret-down"></i></a>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">OTROS<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="/CableElec">CableElec</a>
+      <a href="/CableComun">CableComun</a>
+      <a href="/Celdas">Celdas</a>
+			<a href="/Est_Meteoro">Est_Meteoro</a>
+      <a href="/Generador">Generador</a>
+			<a href="/PLC">PLC</a>
+			<a href="/Radio">Radio</a>
+			<a href="/SeccionadorElec">SeccionadorElec</a>
+			<a href="/Servidor">Servidor</a>
+			<a href="/TableroControl">TableroControl</a>
+			<a href="/TableroProtec">TableroProtec</a>
+			<a href="/Transfer">Transfer</a>
+			<a href="/Transformador">Transformador</a>
+			<a href="/UPS">UPS</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <a href="/Diagrama">DIAGRAMA<i class="fa fa-caret-down"></i></a>
+  </div>
+  <a href="#footer">CONTACTO</a>
+</div>
+	</header>
+
+{% load static %}
+<h2 style= "background: url({% static 'Ima/LA.jpg'%}); width: 100%;">SISTEMA DE INFORMACIÓN, PARA EL MONITOREO SIMULADO SOBRE FALLOS Y RIESGO DE UNA MICRO-RED: CASO EXPERIMENTAL</h2>
+
+    </div>
+</section>
+
+<body>
+	{% load static %}
+	<section style= "background: url({% static 'Ima/SM.jpg'%}); padding-top: 150px; width: 100%; height: 100%; background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;" class="parallax">
+	    <div class="parallax-inner">
+
+	<p align="center"></p>
+
+{% load static %}
+
+<h1 style= "background: url({% static 'Ima/LA.jpg'%}); width: 100%; font-size: 30px;">
+Proyecto de Evaluación de un Sistema Informático, que contribuye a realizar un Análisis de Fallas en una Micro-Red;
+a través de principios Metodológicos del Análisis de Modo y Efecto de Falla (AMEF), así como también disponer de otros
+medios digitales, para complementar una interacción adecuada y disponer alternativas a una posible toma de decisión.
+
+
+<br></br>
+<div  style= "font-size: 30px;"><br>La salida de un AMEF es el “Número Prioritario de Riesgo” también conocido como NPR.
+El NPR es un número que se calcula basándose en la información que se obtiene respecto a:</br>
+
+<br>• Los modos de la falla potenciales</br>
+<br>• Los efectos</br>
+<br>• La capacidad actual del proceso para detectar las fallas </br>
+<br></br>
+<br>Se calcula como el producto de tres calificaciones cuantitativas, relacionadas cada una a los efectos, causas y controles:</br>
+<div align= "center"><br>NPR =Severidad*Ocurrencia*Detección</br></div>
+<br>Severidad: es la estimación de la gravedad del efecto del modo de falla.</br>
+<br>Ocurrencia: es la probabilidad de que una causa especifica, resulte en un modo de falla.</br>
+<br>Detección: es una valor para clasificar la probabilidad de encontrar la falla.</br>
+<br></br>
+<br>El NPR provee la prioridad con la que debe atacarse cada modo de falla identificado</br>
+<br></br>
+<br>500-1000:  Alto riesgo de falla</br>
+<br>125-499:  Medio riesgo de falla</br>
+<br>1-124:  Bajo riesgo de falla</br>
+<br>0:  No existe riesgo de falla</br></div>
+{% load static %}
+
+<div align= "center"><img src="{% static 'Ima/S.png' %}" style="margin-top: 40px;";><br>Severidad</br></img>
+<img src="{% static 'Ima/O.png' %}" style="margin-top: 40px;" ><br>Ocurrencia</br></img>
+<img src="{% static 'Ima/D.png' %}" style="margin-top: 40px;" ><br>Detección</br></img></div>
+
+ </h1>
+
+{% load static %}
+<section style= "background: url({% static 'Ima/a1.jpg'%}); padding-top: 200px; background-attachment: fixed; width: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;" class="parallax1">
+    <div class="parallax-inner1">
+
+    </div>
+</section>
+
+
+
+</body>
+<footer id= "footer"; style="width: 100%;">
+
+
+{% load static %}
+
+<a></a><a></a><a></a>
+<img src="{% static 'Ima/UNAM1.jpg' %}" WIDTH=200 HEIGHT=220 align= "right" style="margin-right: 70px; margin-top: 40px;"></img>
+
+<br>
+<h6 style="margin-left: 70px; margin-top: 15px; font-size: 25px;"> CONTACTO </h6>
+</br>
+
+
+
+  <div style="margin-left: 70px;" class="row">
+
+
+   <label for="name">POSGRADO:</label>
+   <label style= "font-size: 14px;"><i>Administración de la Tecnología</i></label>
+ </div>
+ <br></br>
+ <div style="margin-left: 70px;" class="row">
+   <label for="email">E-MAIL:</label>
+	 <label style= "font-size: 14px;"><i>georgecal@hotmail.com</i></label>
+
+ </div>
+ <br></br>
+ <div style="margin-left: 70px;" class="row">
+   <label for="message">DOMICILIO:</label>
+  <label style= "font-size: 14px;" ><i>Av. Universidad 3000, Ciudad Universitaria
+	<br>	Alcaldía Coyoacán, C.P. 04510, Ciudad de México.</i></label>
+ </div>
+<br></br>
+
+<h4 style= "font-size: 20px; margin-top: 25px;" align="center" >UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO </h4>
+ <h5 style= "font-size: 20px; margin-bottom: 30px;" align="center"> JORGE CALDERON MENDOZA
+ <br style= "font-size: 20px; margin-bottom: 30px; " align="center"> TUTOR: DR. ENRIQUE CABRAL CANO</br></h5>
+</footer>
+
+</html>
